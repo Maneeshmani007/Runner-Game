@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -1056,6 +1055,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5280667181393737275}
     m_Modifications:
+    - target: {fileID: 8405303143934288728, guid: 40139ea1ff26440b7b92d88cbb11a45c,
+        type: 3}
+      propertyPath: m_text
+      value: SLAP RUNNER
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405303143934288728, guid: 40139ea1ff26440b7b92d88cbb11a45c,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8405303144418417604, guid: 40139ea1ff26440b7b92d88cbb11a45c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1165,6 +1174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405303144418417607, guid: 40139ea1ff26440b7b92d88cbb11a45c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40139ea1ff26440b7b92d88cbb11a45c, type: 3}
@@ -1431,6 +1445,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 472289200663523460}
     m_Modifications:
+    - target: {fileID: 5869882798794461456, guid: 94d08068f27f54858beac9871bf3602f,
+        type: 3}
+      propertyPath: m_text
+      value: Slap Runner
+      objectReference: {fileID: 0}
     - target: {fileID: 5869882799813137961, guid: 94d08068f27f54858beac9871bf3602f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1536,10 +1555,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5869882799813137963, guid: 94d08068f27f54858beac9871bf3602f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869882799813137963, guid: 94d08068f27f54858beac9871bf3602f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.85274386
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869882799813137963, guid: 94d08068f27f54858beac9871bf3602f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5869882799813137966, guid: 94d08068f27f54858beac9871bf3602f,
         type: 3}
       propertyPath: m_Name
       value: SplashScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869882799813137966, guid: 94d08068f27f54858beac9871bf3602f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d08068f27f54858beac9871bf3602f, type: 3}
