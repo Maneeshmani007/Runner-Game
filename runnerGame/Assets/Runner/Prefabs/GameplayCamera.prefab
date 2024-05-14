@@ -45,7 +45,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.28057137, g: 0.83521646, b: 0.9150943, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.8135405, b: 0.7028302, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CameraAnglePreset: 0
-  m_Offset: {x: 0, y: 0.6, z: 3}
-  m_LookAtOffset: {x: 0, y: -0.9, z: -3.5}
-  m_LockCameraPosition: 0
+  m_Offset: {x: 0, y: -0.58, z: 2.33}
+  m_LookAtOffset: {x: 0, y: -0.85, z: -4.27}
+  m_LockCameraPosition: 1
   m_SmoothCameraFollow: 1
   m_SmoothCameraFollowStrength: 8

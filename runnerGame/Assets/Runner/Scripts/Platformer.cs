@@ -10,16 +10,29 @@ namespace HyperCasual.Runner
     /// </summary>
     [ExecuteInEditMode]
     [RequireComponent(typeof(Collider))]
+   
+
     public class Platformer : Spawnable
     {
+
+        public bool IsEnmey = false;
+        public Animator CharaAnim;
         const string k_PlayerTag = "Player";
 
         void OnTriggerEnter(Collider col)
         {
-            //if (col.CompareTag(k_PlayerTag))
-            //{
-            //    GameManager.Instance.Lose();
-            //}
+            if (col.CompareTag(k_PlayerTag)&& IsEnmey==true)
+            {
+                Debug.Log("player");
+                Invoke("SlapAnimdelay", .01f);
+            }
+        }
+
+
+
+        public void SlapAnimdelay()
+        {
+            CharaAnim.SetBool("Slapped", true);
         }
     }
 }

@@ -48,6 +48,10 @@ namespace HyperCasual.Runner
 
         const float k_MinimumScale = 0.1f;
         static readonly string s_Speed = "Speed";
+        static readonly string s_SLap = "Slap1";
+        
+
+
 
         enum PlayerSpeedPreset
         {
@@ -60,7 +64,8 @@ namespace HyperCasual.Runner
         Transform m_Transform;
         Vector3 m_StartPosition;
         bool m_HasInput;
-        float m_MaxXPosition;
+        bool slap;
+        public float m_MaxXPosition;
         float m_XPos;
         float m_ZPos;
         float m_TargetPosition;
@@ -114,7 +119,7 @@ namespace HyperCasual.Runner
 
             Initialize();
         }
-
+        
         /// <summary>
         /// Set up all necessary values for the PlayerController.
         /// </summary>
@@ -254,7 +259,25 @@ namespace HyperCasual.Runner
             ResetSpeed();
             ResetScale();
         }
+        private void OnTriggerEnter(Collider other)
+        {
 
+            if (other.CompareTag("Slap"))
+            {
+                
+                Debug.Log("trigger enterered");
+                slap = true;
+                m_Animator.SetBool("Slap2", true);
+            }
+           
+        }
+        public void SLaptrigger() {
+            m_Animator.transform.localRotation = Quaternion.Euler(0,0,0);
+            m_Animator.SetBool("Slap2", false);
+            Debug.Log("Slaptriggerworked");
+        }
+
+        
         void Update()
         {
             float deltaTime = Time.deltaTime;
@@ -309,6 +332,18 @@ namespace HyperCasual.Runner
 
                 m_Animator.SetFloat(s_Speed, distancePerSecond);
             }
+            if (m_Animator != null && deltaTime > 0.0f && slap==true)
+            {
+                Debug.Log("trigger enterered   slap entered");
+                float distanceTravelledSinceLastFrame = (m_Transform.position - m_LastPosition).magnitude;
+                float distancePerSecond = distanceTravelledSinceLastFrame / deltaTime;
+
+                m_Animator.SetFloat(s_SLap, distancePerSecond);
+                m_Animator.SetFloat(s_Speed, distancePerSecond);
+               // m_Animator.SetBool("Slap2", false);
+                slap = false;
+                Invoke("SLaptrigger", 1);
+            }
 
             if (m_Transform.position != m_LastPosition)
             {
@@ -330,9 +365,12 @@ namespace HyperCasual.Runner
             m_Speed = Mathf.Max(m_Speed, targetSpeed);
         }
 
+
         bool Approximately(Vector3 a, Vector3 b)
         {
             return Mathf.Approximately(a.x, b.x) && Mathf.Approximately(a.y, b.y) && Mathf.Approximately(a.z, b.z);
         }
+
+
     }
 }
