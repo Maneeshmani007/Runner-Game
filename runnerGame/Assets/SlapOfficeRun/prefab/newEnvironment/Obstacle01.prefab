@@ -179,6 +179,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6219660422369056258}
   - component: {fileID: 7860489947231149552}
+  - component: {fileID: -4326210847988792812}
+  - component: {fileID: -355134292044527410}
+  - component: {fileID: 492477451812929313}
   m_Layer: 0
   m_Name: Obstacle01
   m_TagString: Untagged
@@ -218,3 +221,42 @@ MonoBehaviour:
   z: 90
   y: 0
   x: 0
+--- !u!65 &-4326210847988792812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709093096139607224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0766561, y: 0.19102995, z: 0.12875125}
+  m_Center: {x: -0.008063763, y: -0.0137681365, z: 0.025477171}
+--- !u!114 &-355134292044527410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709093096139607224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c2e46c573954e7aaeab312afe10062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SnapToGrid: 1
+--- !u!65 &492477451812929313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709093096139607224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16789794, y: 1.1115441, z: 0.10103799}
+  m_Center: {x: 0.01054829, y: 0.017692685, z: 0.035721436}

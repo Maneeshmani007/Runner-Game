@@ -65,7 +65,6 @@ GameObject:
   - component: {fileID: 7819268680679308711}
   - component: {fileID: 7819268680679308713}
   - component: {fileID: 8690817657091962807}
-  - component: {fileID: 5646237971009559323}
   m_Layer: 0
   m_Name: slaptrigger
   m_TagString: Slap
@@ -116,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SnapToGrid: 1
   IsEnmey: 1
-  CharaAnim: {fileID: 5659284034664574859}
+  CharaAnim: {fileID: 0}
 --- !u!114 &8690817657091962807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,26 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229e613a156d1445281606b15f6d20b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5646237971009559323
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7819268680679308708}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: a4819ca68d0e748938e031dee8c7b52c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 51146b76bbd814a53b94a9f6709d55f2, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  charaAnim: {fileID: 2740665701598981769}
 --- !u!1001 &6853144253152681644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,17 +211,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shoulder Hit And Fall
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1266235781036667175, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894, type: 3}
 --- !u!4 &1759214261898671601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5148386709866130269, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
-    type: 3}
-  m_PrefabInstance: {fileID: 6853144253152681644}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &5659284034664574859 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1266235781036667175, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
     type: 3}
   m_PrefabInstance: {fileID: 6853144253152681644}
   m_PrefabAsset: {fileID: 0}

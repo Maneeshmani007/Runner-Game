@@ -24,7 +24,7 @@ namespace HyperCasual.Runner
             if (col.CompareTag(k_PlayerTag)&& IsEnmey==true)
             {
                 Debug.Log("player");
-                Invoke("SlapAnimdelay", .01f);
+                Invoke("SlapAnimdelay", .1f);
             }
         }
 
