@@ -5,6 +5,10 @@ using UnityEngine;
 public class AnimChanger : MonoBehaviour
 {
     public Animator charaAnim;
+    public bool LeftSide;
+    public bool RigthSide;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +19,17 @@ public class AnimChanger : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!LeftSide && RigthSide)
+        {
+            Debug.Log("leftSideWorked");
+        }
+        else if(LeftSide && !RigthSide)
+        {
+            Debug.Log("RightSideWorked");
+        }
     }
 }

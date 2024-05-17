@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4823293299873526888}
   - component: {fileID: 8415768929349886250}
   - component: {fileID: 2601894786892239760}
+  - component: {fileID: 2378421896403557001}
+  - component: {fileID: 8074244478995651987}
+  - component: {fileID: 5820048687443406871}
   m_Layer: 0
   m_Name: moving grinder triple 1
   m_TagString: Untagged
@@ -85,6 +88,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2378421896403557001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435120295838393860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e2c23171012435b9150df82efdf51d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  z: 0
+  y: 0
+  x: 0
+  speed: 1
+--- !u!95 &8074244478995651987
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435120295838393860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &5820048687443406871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435120295838393860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2642808, y: 2.010347, z: 1.1378152}
+  m_Center: {x: -0.091266125, y: 1.005173, z: 0.008849978}
 --- !u!1 &1620864061338339231
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +232,9 @@ GameObject:
   - component: {fileID: 833547464467446607}
   - component: {fileID: 3908499451846287743}
   - component: {fileID: 8449898140728725529}
+  - component: {fileID: 2680401568887342203}
+  - component: {fileID: 1275816170074085100}
+  - component: {fileID: 2367209845695271572}
   m_Layer: 0
   m_Name: moving grinder triple 3
   m_TagString: Untagged
@@ -254,6 +309,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2680401568887342203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385304570012812611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e2c23171012435b9150df82efdf51d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  z: 0
+  y: 0
+  x: 0
+  speed: 1
+--- !u!95 &1275816170074085100
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385304570012812611}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2367209845695271572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385304570012812611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2002082, y: 2.010347, z: 0.7988945}
+  m_Center: {x: -0.024161339, y: 1.005173, z: -0.036525667}
 --- !u!1 &5676354052717728484
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +369,9 @@ GameObject:
   - component: {fileID: 5016929644650211286}
   - component: {fileID: 5534871054724237769}
   - component: {fileID: 3293656330085861418}
+  - component: {fileID: 5219806540366365040}
+  - component: {fileID: 4203226983719937571}
+  - component: {fileID: 224206676680646180}
   m_Layer: 0
   m_Name: moving grinder triple 2
   m_TagString: Untagged
@@ -339,6 +446,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5219806540366365040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676354052717728484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e2c23171012435b9150df82efdf51d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  z: 0
+  y: 0
+  x: 0
+  speed: 1
+--- !u!95 &4203226983719937571
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676354052717728484}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &224206676680646180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676354052717728484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.96462524, y: 2.010347, z: 0.9517019}
+  m_Center: {x: -0.09320086, y: 1.005173, z: -0.019119859}
 --- !u!1 &8758808352872307269
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +546,7 @@ MonoBehaviour:
   z: 90
   y: 0
   x: 0
+  speed: 1
 --- !u!1 &8893819535687352187
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +559,7 @@ GameObject:
   - component: {fileID: 4665769891749677837}
   - component: {fileID: 2134369526466713143}
   - component: {fileID: 6802806578996432208}
-  - component: {fileID: 5977975320015482163}
+  - component: {fileID: 1735325171920703799}
   m_Layer: 0
   m_Name: Obstacle02
   m_TagString: Untagged
@@ -437,8 +594,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5246565, y: 1.6412139, z: 1.8265685}
-  m_Center: {x: -0.02427888, y: -1.9940734, z: 0.20999998}
+  m_Size: {x: 1.3302389, y: 1.073192, z: 1.8265685}
+  m_Center: {x: 0.07292992, y: -2.030639, z: 0.20999998}
 --- !u!65 &2134369526466713143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -450,8 +607,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5781317, y: 1.7503958, z: 1.8265685}
-  m_Center: {x: 2.0156891, y: 2.0599763, z: 0.20999998}
+  m_Size: {x: 1.2626411, y: 1.0644156, z: 1.8265685}
+  m_Center: {x: 2.027886, y: 1.9793625, z: 0.20999998}
 --- !u!65 &6802806578996432208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -463,9 +620,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2002777, y: 1.5115495, z: 1.8265685}
-  m_Center: {x: -1.9126554, y: 1.9564052, z: -0.01999998}
---- !u!114 &5977975320015482163
+  m_Size: {x: 1.2124515, y: 1.0010082, z: 1.8265685}
+  m_Center: {x: -1.9822798, y: 1.9279549, z: -0.01999998}
+--- !u!114 &1735325171920703799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

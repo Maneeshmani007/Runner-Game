@@ -79,6 +79,7 @@ namespace HyperCasual.Runner
         void Awake()
         {
             SetupInstance();
+            RenderSettings.fog = true;
         }
 
         void OnEnable()

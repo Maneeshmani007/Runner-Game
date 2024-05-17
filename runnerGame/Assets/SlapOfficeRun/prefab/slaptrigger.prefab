@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 7178522246761384159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1759214261898671601}
   m_Father: {fileID: 7819268680679308710}
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 7819268680679308711}
   - component: {fileID: 7819268680679308713}
   - component: {fileID: 8690817657091962807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slaptrigger
   m_TagString: Slap
   m_Icon: {fileID: 0}
@@ -96,11 +96,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7819268680679308708}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.52, y: 6.36, z: 1.38}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.9696302, y: 6.36, z: 1.38}
+  m_Center: {x: 0.08640957, y: 0, z: 0}
 --- !u!114 &7819268680679308713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SnapToGrid: 1
   IsEnmey: 1
-  CharaAnim: {fileID: 0}
+  CharaAnim: {fileID: 2740665701598981769}
 --- !u!114 &8690817657091962807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charaAnim: {fileID: 2740665701598981769}
+  LeftSide: 1
+  RigthSide: 0
 --- !u!1001 &6853144253152681644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,6 +153,36 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2622197816207939356, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622197816207939356, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622197816207939356, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622197816207939356, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424245112118668419, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424245112118668419, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ac9d6cabf88b415abe0f8062b45e617, type: 2}
     - target: {fileID: 5148386709866130269, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
         type: 3}
       propertyPath: m_RootOrder
@@ -169,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 5148386709866130269, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.439999
+      value: 11.84
       objectReference: {fileID: 0}
     - target: {fileID: 5148386709866130269, guid: 4caaf6a47cb6c43cb8ea4b669e1ad894,
         type: 3}

@@ -14,9 +14,9 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.9433962, g: 0.93894625, b: 0.93894625, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &238935441
 MonoBehaviour:
@@ -254,80 +254,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1962546982}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2104196933
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6115785977947455700, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_Name
-      value: Obstacle03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.426125
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20.54062
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6887255474642606702, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830255220842962549, guid: b4b9c202bed83434888a4b8ec16a2de8,
-        type: 3}
-      propertyPath: y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b4b9c202bed83434888a4b8ec16a2de8, type: 3}
 --- !u!114 &424909044076258115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7005271390482585116
 Transform:
@@ -443,7 +369,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

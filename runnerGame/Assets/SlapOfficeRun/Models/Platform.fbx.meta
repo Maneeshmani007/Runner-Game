@@ -3,22 +3,12 @@ guid: bcb069f8168d13645906fb019e20158e
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FloorSide_Mat
-    second: {fileID: 2100000, guid: af3a7517a8f5b90449ead729a4fc585f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Floor_Mat
-    second: {fileID: 2100000, guid: b81ca75e3f438b9468cb6219d673186d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

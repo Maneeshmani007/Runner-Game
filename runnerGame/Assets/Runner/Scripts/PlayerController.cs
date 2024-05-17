@@ -116,7 +116,7 @@ namespace HyperCasual.Runner
             }
 
             s_Instance = this;
-
+            RenderSettings.fog = true;
             Initialize();
         }
         
@@ -267,13 +267,26 @@ namespace HyperCasual.Runner
                 
                 Debug.Log("trigger enterered");
                 slap = true;
-                m_Animator.SetBool("Slap2", true);
+
+                if (other.GetComponent<AnimChanger>().LeftSide == true)
+                {
+                    Debug.Log("leftsideWORKED");
+                    m_Animator.SetBool("Slap2", true);
+                }
+                else if(other.GetComponent<AnimChanger>().RigthSide == true)
+                {
+                    Debug.Log("RIGHTsideWORKED");
+                     m_Animator.SetBool("SlapLeft", true);
+                }
+
+                // m_Animator.SetBool("Slap2", true);
             }
            
         }
         public void SLaptrigger() {
             m_Animator.transform.localRotation = Quaternion.Euler(0,0,0);
             m_Animator.SetBool("Slap2", false);
+            m_Animator.SetBool("SlapLeft", false);
             Debug.Log("Slaptriggerworked");
         }
 

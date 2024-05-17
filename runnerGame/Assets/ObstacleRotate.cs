@@ -7,6 +7,7 @@ public class ObstacleRotate : MonoBehaviour
     public float z=0;
     public float y=0;
     public float x=0;
+    public float speed = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,6 @@ public class ObstacleRotate : MonoBehaviour
     void Update()
     {
         
-        transform.Rotate(x * Time.deltaTime, y * Time.deltaTime, z*Time.deltaTime);
+        transform.Rotate(x* speed * Time.deltaTime, y * speed * Time.deltaTime, z* speed * Time.deltaTime);
     }
 }
