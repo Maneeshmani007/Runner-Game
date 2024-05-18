@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555647705176474545}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -1.47, z: 82.8}
-  m_LocalScale: {x: 4, y: 1, z: 80}
+  m_LocalPosition: {x: 0, y: -6.3, z: 83}
+  m_LocalScale: {x: 3.5, y: 4, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: d96c2c3684dc645f18bc1658752f5ee5, type: 2}
-  - {fileID: 1878111574707407903, guid: 09e567da4373f45ba9daa1bb086deeeb, type: 3}
+  - {fileID: 2100000, guid: a2f65d6f2ab714729a09127f2e4c19f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb01bfc9d1f04746a0ecff3c3625fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SnapToGrid: 0
+  m_SnapToGrid: 1
   IsEnmey: 0
   CharaAnim: {fileID: 0}
