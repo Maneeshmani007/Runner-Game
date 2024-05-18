@@ -28,11 +28,22 @@ namespace HyperCasual.Runner
                 throw new Exception($"{nameof(m_LevelDefinition)} is null!");
 
             yield return m_SceneController.LoadNewScene(nameof(m_LevelDefinition));
+            RenderSettings.skybox = m_LevelDefinition.skyBoxMat;
+            RenderSettings.fogColor = new Color32(81, 169, 229, 255);
+            RenderSettings.fogMode = FogMode.Linear;
+            RenderSettings.fogStartDistance = 300;
+            RenderSettings.fogEndDistance = 450; 
 
             // Load managers specific to the level
             foreach (var prefab in m_ManagerPrefabs)
             {
-                Object.Instantiate(prefab);
+                GameObject obj =  Object.Instantiate(prefab);
+                //var player = obj.GetComponent<PlayerController>();
+                //if(player != null)
+                //{
+                //    CineCameraContrller.Instance.CMvcam1.Follow = player.CameraTarget.transform;
+                //    //CineCameraContrller.Instance.CMvcam1.LookAt = player.CameraTarget.transform;
+                //}
             }
 
             GameManager.Instance.LoadLevel(m_LevelDefinition);

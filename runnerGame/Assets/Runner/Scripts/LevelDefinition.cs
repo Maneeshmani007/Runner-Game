@@ -69,6 +69,8 @@ namespace HyperCasual.Runner
         /// </summary>
         public SpawnableObject[] Spawnables;
 
+        public Material skyBoxMat;
+
         [System.Serializable]
         public class SpawnableObject
         {

@@ -43,6 +43,8 @@ namespace HyperCasual.Runner
         [SerializeField]
         bool m_AutoMoveForward = true;
 
+        public GameObject CameraTarget;
+
         Vector3 m_LastPosition;
         float m_StartHeight;
 
@@ -293,6 +295,7 @@ namespace HyperCasual.Runner
         
         void Update()
         {
+            //return;
             float deltaTime = Time.deltaTime;
 
             // Update Scale
