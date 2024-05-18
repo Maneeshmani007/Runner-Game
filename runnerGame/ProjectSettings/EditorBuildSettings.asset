@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Shared/Scenes/Boot.unity
+    path: Assets/Scenes/Boot.unity
     guid: c08c9c64ef12d4b4b8d662c37aa3afab
   - enabled: 1
-    path: Assets/Runner/Scenes/RunnerLevelEditor.unity
+    path: Assets/Scenes/RunnerLevelEditor.unity
     guid: c18bbe39f11fb4109b83e6914a7d16de
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7abe46dede6624a60a115c533b19a2a8,

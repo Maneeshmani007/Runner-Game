@@ -1165,3 +1165,4 @@ MonoBehaviour:
     Scale: {x: 0.5, y: 0.5, z: 0.5}
     BaseColor: {r: 1, g: 0.88883203, b: 0, a: 1}
     SnapToGrid: 1
+  skyBoxMat: {fileID: 2100000, guid: 99a400087584f4263b1a8979d6007ad4, type: 2}
