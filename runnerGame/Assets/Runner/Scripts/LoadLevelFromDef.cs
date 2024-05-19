@@ -36,10 +36,11 @@ namespace HyperCasual.Runner
             RenderSettings.ambientLight = new Color32(195, 195, 195, 255);
 
 
-            RenderSettings.fogColor = Color.white;
-            RenderSettings.fogMode = FogMode.Linear;
-            RenderSettings.fogStartDistance = 250;
-            RenderSettings.fogEndDistance = 300;
+            //RenderSettings.fogColor = Color.white;
+            ////RenderSettings.fogMode = FogMode.Linear;
+            //RenderSettings.fogStartDistance = 250;
+            //RenderSettings.fogEndDistance = 300;
+            RenderSettings.fogDensity = 0;
 
             // Load managers specific to the level
             foreach (var prefab in m_ManagerPrefabs)
