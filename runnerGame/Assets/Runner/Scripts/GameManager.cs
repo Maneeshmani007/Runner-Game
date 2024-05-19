@@ -116,6 +116,7 @@ namespace HyperCasual.Runner
         /// </param>
         public static void LoadLevel(LevelDefinition levelDefinition, ref GameObject levelGameObject)
         {
+            FindObjectOfType<CameraManager>().startOffset();
             if (levelDefinition == null)
             {
                 Debug.LogError("Invalid Level!");

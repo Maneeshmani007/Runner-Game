@@ -25,7 +25,7 @@ public class AnimChanger : MonoBehaviour
     {
         if (!LeftSide && RigthSide)
         {
-            charaAnim.SetTrigger("mixamo.com (1)");
+           // charaAnim.SetTrigger("mixamo.com (1)");
             Debug.Log("leftSideWorked");
         }
         else if(LeftSide && !RigthSide)

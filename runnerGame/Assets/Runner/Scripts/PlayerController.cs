@@ -51,6 +51,7 @@ namespace HyperCasual.Runner
         const float k_MinimumScale = 0.1f;
         static readonly string s_Speed = "Speed";
         static readonly string s_SLap = "Slap1";
+
         
 
 
@@ -67,6 +68,7 @@ namespace HyperCasual.Runner
         Vector3 m_StartPosition;
         bool m_HasInput;
         bool slap;
+        bool finished;
         public float m_MaxXPosition;
         float m_XPos;
         float m_ZPos;
@@ -244,6 +246,25 @@ namespace HyperCasual.Runner
             m_MaxXPosition = levelWidth * k_HalfWidth;
         }
 
+
+        public void PlayerStop()
+        {
+            m_CustomPlayerSpeed = 0;
+            m_Speed = 0.0f;
+            finished = true;
+            m_Animator.SetBool("Finish",true);
+
+        }
+        public void jumpunch()
+        {
+            m_Animator.SetBool("JumpSlap", true);
+        }
+        public void FinshStop()
+        {
+            m_Animator.SetBool("Finish", false);
+            m_Animator.SetBool("JumpSlap", false);
+        }
+
         /// <summary>
         /// Returns player to their starting position
         /// </summary>
@@ -274,11 +295,14 @@ namespace HyperCasual.Runner
                 {
                     Debug.Log("leftsideWORKED");
                     m_Animator.SetBool("Slap2", true);
+                    m_Animator.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    //SLaptrigger();
                 }
                 else if(other.GetComponent<AnimChanger>().RigthSide == true)
                 {
                     Debug.Log("RIGHTsideWORKED");
                      m_Animator.SetBool("SlapLeft", true);
+                    m_Animator.transform.localRotation = Quaternion.Euler(0, 0, 0);
                 }
 
                 // m_Animator.SetBool("Slap2", true);
@@ -295,8 +319,14 @@ namespace HyperCasual.Runner
         
         void Update()
         {
+            
+               
             //return;
             float deltaTime = Time.deltaTime;
+            if (finished == true)
+            {
+                deltaTime = 0;
+            }
 
             // Update Scale
 

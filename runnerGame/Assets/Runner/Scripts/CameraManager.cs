@@ -18,7 +18,7 @@ namespace HyperCasual.Runner
         static CameraManager s_Instance;
 
         [SerializeField]
-        CameraAnglePreset m_CameraAnglePreset = CameraAnglePreset.Behind;
+        public CameraAnglePreset m_CameraAnglePreset = CameraAnglePreset.Behind;
 
         [SerializeField]
         Vector3 m_Offset;
@@ -35,13 +35,14 @@ namespace HyperCasual.Runner
         [SerializeField]
         float m_SmoothCameraFollowStrength = 10.0f;
 
-        enum CameraAnglePreset
+         public enum CameraAnglePreset
         {
             Behind,
             Overhead,
             Side,
             FirstPerson,
             Custom,
+            //Finishpos
         }
 
         Vector3[] m_PresetOffsets = new Vector3[]
@@ -50,7 +51,8 @@ namespace HyperCasual.Runner
             new Vector3(0.0f, 9.0f, -5.0f), // Overhead
             new Vector3(5.0f, 5.0f, -8.0f), // Side
             new Vector3(0.0f, 1.0f, 0.0f),  // FirstPerson
-            Vector3.zero                    // Custom
+            new Vector3(-0.56f, 7.09f, -8.03f)       // Custom
+            //new Vector3(0.10f,9.0f,-5.0f)
         };
 
         Vector3[] m_PresetLookAtOffsets = new Vector3[]
@@ -59,7 +61,8 @@ namespace HyperCasual.Runner
             new Vector3(0.0f, 0.0f, 4.0f),  // Overhead
             new Vector3(-0.5f, 1.0f, 2.0f), // Side
             new Vector4(0.0f, 1.0f, 2.0f),  // FirstPerson
-            Vector3.zero                    // Custom
+            new Vector3(-1.13f, 2.44f, 6.82f)   // Custom
+            //new Vector3(0.10f, 0.0f, 4.0f)
         };
 
         bool[] m_PresetLockCameraPosition = new bool[]
@@ -68,7 +71,8 @@ namespace HyperCasual.Runner
             false, // Overhead
             true,  // Side
             false, // FirstPerson
-            false  // Custom
+            false,  // Custom
+            //false  // Finishcampos
         };
 
         Transform m_Transform;
@@ -80,8 +84,77 @@ namespace HyperCasual.Runner
         {
             SetupInstance();
             RenderSettings.fog = true;
+           // startOffset();
+        }
+        public void startOffset()
+        {
+            m_Offset = new Vector3(0f, 0.35f, -1.9f);
+            m_LookAtOffset = new Vector3(0f, 1.0f, -10f);
+            //isTransitioningToFinishOffset = false;
+        }
+        /// <summary>
+        /// /smooth  cam flow add
+        /// </summary>
+
+        //private bool isTransitioningToFinishOffset = false; // Flag to track if we're transitioning to the finish offset
+
+        //void SetCameraPositionAndOrientation1(bool smoothCameraFollow)
+        //{
+        //    Vector3 playerPosition = GetPlayerPosition();
+
+        //    int presetIndex = (int)m_CameraAnglePreset;
+        //    if (presetIndex >= 0 && presetIndex < m_PresetOffsets.Length)
+        //    {
+        //        Vector3 offset = playerPosition + m_PresetOffsets[presetIndex] + m_Offset;
+        //        Vector3 lookAtOffset = playerPosition + m_PresetLookAtOffsets[presetIndex] + m_LookAtOffset;
+
+        //        if (isTransitioningToFinishOffset)
+        //        {
+        //            // Smoothly transition to the finish offset
+        //            float lerpAmount = Time.deltaTime * m_SmoothCameraFollowStrength;
+        //            m_Transform.position = Vector3.Lerp(m_Transform.position, offset, lerpAmount);
+        //            m_Transform.LookAt(Vector3.Lerp(m_Transform.position + m_Transform.forward, lookAtOffset, lerpAmount));
+        //        }
+        //        else
+        //        {
+        //            // Normal camera movement
+        //            if (smoothCameraFollow)
+        //            {
+        //                float lerpAmount = Time.deltaTime * m_SmoothCameraFollowStrength;
+        //                m_Transform.position = Vector3.Lerp(m_Transform.position, offset, lerpAmount);
+        //                m_Transform.LookAt(Vector3.Lerp(m_Transform.position + m_Transform.forward, lookAtOffset, lerpAmount));
+        //            }
+        //            else
+        //            {
+        //                m_Transform.position = playerPosition + m_PresetOffsets[presetIndex] + m_Offset;
+        //                m_Transform.LookAt(lookAtOffset);
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("Invalid Camera Angle Preset selected.");
+        //    }
+        //}
+
+        public void finishoffset()
+        {
+            m_Offset = new Vector3(5.0f, 5.0f, -4.12f);
+            m_LookAtOffset = new Vector3(-0.5f, 1.0f, 2.0f);
+            //isTransitioningToFinishOffset = true; // Start the transition to the finish offset
         }
 
+
+
+
+        ///////
+        //public void finishoffset()
+        //{
+        //    m_Offset = new Vector3(5.0f, 5.0f, -8.0f); 
+        //    m_LookAtOffset = new Vector3(-0.5f, 1.0f, 2.0f);
+        //   // m_Offset = new Vector3(-0.56f, 7.09f, -8.03f);
+        //   // m_LookAtOffset = new Vector3(-1.13f, 2.44f, 6.82f);
+        //}
         void OnEnable()
         {
             SetupInstance();
@@ -152,6 +225,7 @@ namespace HyperCasual.Runner
             }
 
             SetCameraPositionAndOrientation(m_SmoothCameraFollow);
+            //SetCameraPositionAndOrientation1(isTransitioningToFinishOffset);        ///new added
         }
 
         void SetCameraPositionAndOrientation(bool smoothCameraFollow)

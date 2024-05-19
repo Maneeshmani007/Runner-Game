@@ -13,13 +13,40 @@ namespace HyperCasual.Runner
     public class FinishLine : Spawnable
     {
         const string k_PlayerTag = "Player";
+        public bool IsLsttimeAnim = false;
         
         void OnTriggerEnter(Collider col)
         {
             if (col.CompareTag(k_PlayerTag))
             {
-                GameManager.Instance.Win();
+                if (IsLsttimeAnim == true)
+                {
+                    Debug.Log("lastTimeShowsanim");
+                    // FindObjectOfType<CameraManager>().m_CameraAnglePreset = CameraManager.CameraAnglePreset.Side;
+                    FindObjectOfType<CameraManager>().finishoffset();
+                    FindObjectOfType<PlayerController>().PlayerStop();
+                    StartCoroutine(IslasttimeAnim());
+                    //lastcheckanimation
+                    //need to add camera angle
+                    //playerspeed stop
+                }
+                else
+                {
+                    GameManager.Instance.Win();
+                }
+               
             }
+        }
+
+
+        public IEnumerator IslasttimeAnim()
+        {
+            yield return new WaitForSeconds(1.8f);
+            FindObjectOfType<PlayerController>().jumpunch();
+            yield return new WaitForSeconds(5f);
+            FindObjectOfType<PlayerController>().FinshStop();
+            GameManager.Instance.Win();
+            Debug.Log("new anim play");
         }
     }
 }

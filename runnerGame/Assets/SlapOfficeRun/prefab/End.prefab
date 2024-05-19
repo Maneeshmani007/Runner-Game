@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 66969786099739197}
   - component: {fileID: 2812810106410393335}
   - component: {fileID: 2680595222534568900}
-  - component: {fileID: 8743334348882592098}
+  - component: {fileID: 504749419155626952}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.5167265, y: 2.315885, z: 9.372146}
   m_Center: {x: 0, y: 1.1579425, z: 0.00000023841856}
---- !u!114 &8743334348882592098
+--- !u!114 &504749419155626952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4326243538759581474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c2e46c573954e7aaeab312afe10062, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb01bfc9d1f04746a0ecff3c3625fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SnapToGrid: 1
+  IsEnmey: 0
+  CharaAnim: {fileID: 0}
