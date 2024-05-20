@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 1146987981432028437}
   m_SkinnedMeshRenderer: {fileID: 705686507843345271}
-  m_PlayerSpeed: 2
+  m_PlayerSpeed: 1
   m_CustomPlayerSpeed: 7
   m_AccelerationSpeed: 10
   m_DecelerationSpeed: 20
