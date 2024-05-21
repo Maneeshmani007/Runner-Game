@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,6 +37,7 @@ namespace HyperCasual.Runner
         LevelDefinition m_LevelDefinition;
 
         List<Spawnable> m_ActiveSpawnables = new List<Spawnable>();
+       public  List<AnimChanger> AnimChara = new List<AnimChanger>();
 
         /// <summary>
         /// Call this method to add a Spawnable to the list of active Spawnables.
@@ -44,7 +46,10 @@ namespace HyperCasual.Runner
         {
             m_ActiveSpawnables.Add(spawnable);
         }
-
+        public void AddAnimSpawnble(AnimChanger animchanger)
+        {
+            AnimChara.Add(animchanger);
+        }
         /// <summary>
         /// Calling this method calls the Reset() method on all Spawnables in this level.
         /// </summary>
@@ -54,6 +59,7 @@ namespace HyperCasual.Runner
             {
                 m_ActiveSpawnables[i].ResetSpawnable();
             }
+           
         }
 
         void Awake()
@@ -83,5 +89,7 @@ namespace HyperCasual.Runner
 
             s_Instance = this;
         }
+
+        
     }
 }

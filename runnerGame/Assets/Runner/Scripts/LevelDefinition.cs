@@ -100,6 +100,9 @@ namespace HyperCasual.Runner
             /// </summary>
             public Color BaseColor = Color.white;
 
+
+
+            public int HoldNum;
             /// <summary>
             /// True if this object should snap to a levels grid. 
             /// Setting this value to false will make this SpawnableObject

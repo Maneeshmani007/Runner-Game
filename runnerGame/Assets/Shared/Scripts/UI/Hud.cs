@@ -15,7 +15,7 @@ namespace HyperCasual.Gameplay
     public class Hud : View
     {
         [SerializeField]
-        TextMeshProUGUI m_GoldText;
+        public TextMeshProUGUI m_GoldText;
         [SerializeField]
         Slider m_XpSlider;
         [SerializeField]

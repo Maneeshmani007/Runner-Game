@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using HyperCasual.Gameplay;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace HyperCasual.Runner
 {
@@ -69,6 +71,7 @@ namespace HyperCasual.Runner
         bool m_HasInput;
         bool slap;
         bool finished;
+        bool dead;
         public float m_MaxXPosition;
         float m_XPos;
         float m_ZPos;
@@ -78,8 +81,9 @@ namespace HyperCasual.Runner
         Vector3 m_Scale;
         Vector3 m_TargetScale;
         Vector3 m_DefaultScale;
-
+        public AnimChanger lastEnemy;
         const float k_HalfWidth = 0.5f;
+        public Text CoinNum;
 
         /// <summary> The player's root Transform component. </summary>
         public Transform Transform => m_Transform;
@@ -111,6 +115,8 @@ namespace HyperCasual.Runner
         /// <summary> The player's maximum X position. </summary>
         public float MaxXPosition => m_MaxXPosition;
 
+        public LevelManager Levlmanger;
+        public int playeerCoinnum;
         void Awake()
         {
             if (s_Instance != null && s_Instance != this)
@@ -121,6 +127,7 @@ namespace HyperCasual.Runner
 
             s_Instance = this;
             RenderSettings.fog = true;
+            //playeerCoinnum = 0;
             Initialize();
         }
         
@@ -129,6 +136,8 @@ namespace HyperCasual.Runner
         /// </summary>
         public void Initialize()
         {
+
+            UpdateCoinDisplay();
             m_Transform = transform;
             m_StartPosition = m_Transform.position;
             m_DefaultScale = m_Transform.localScale;
@@ -147,6 +156,23 @@ namespace HyperCasual.Runner
             ResetSpeed();
         }
 
+
+
+
+
+
+
+        public void UpdateCoinDisplay()
+        {
+            string coinnum = playeerCoinnum.ToString();
+            CoinNum.text = coinnum;
+        }
+
+        public void AddCoins(int amount)
+        {
+            playeerCoinnum += amount;
+            UpdateCoinDisplay();
+        }
         /// <summary>
         /// Returns the current default speed based on the currently
         /// selected PlayerSpeed preset.
@@ -255,6 +281,29 @@ namespace HyperCasual.Runner
             m_Animator.SetBool("Finish",true);
 
         }
+        public void Deadstop()
+        {
+            m_CustomPlayerSpeed = 0;
+            m_Speed = 0.0f;
+            m_Animator.SetBool("Finish", true);
+            m_Animator.SetBool("Dead", true);
+         
+            slap = false;
+            dead = true;
+            FindObjectOfType<CameraManager>().finishoffset();
+            Invoke("SlapSound", 1.4f);
+            Invoke("losegame", 3f);
+            
+        }
+        public void losegame()
+        {
+            GameManager.Instance.Lose();
+        }
+        public void SlapSound()
+        {
+            AudioManager.Instance.PlaySlapSound();
+        }
+
         public void jumpunch()
         {
             m_Animator.SetBool("JumpSlap", true);
@@ -319,11 +368,12 @@ namespace HyperCasual.Runner
         
         void Update()
         {
-            
-               
+
+            CoinNum.text=FindObjectOfType<Hud>()?.GoldValue.ToString();
+            UpdateCoinDisplay();
             //return;
             float deltaTime = Time.deltaTime;
-            if (finished == true)
+            if (finished == true||dead==true)
             {
                 deltaTime = 0;
             }

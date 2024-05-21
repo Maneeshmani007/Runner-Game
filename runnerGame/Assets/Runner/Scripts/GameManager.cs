@@ -144,6 +144,7 @@ namespace HyperCasual.Runner
             for (int i = 0; i < levelDefinition.Spawnables.Length; i++)
             {
                 LevelDefinition.SpawnableObject spawnableObject = levelDefinition.Spawnables[i];
+                //LevelDefinition,SpawnableObject spawnableObject = levelDefinition.Spawnables[i];
 
                 if (spawnableObject.SpawnablePrefab == null)
                 {
@@ -155,10 +156,12 @@ namespace HyperCasual.Runner
                 Vector3 scale = spawnableObject.Scale;
 
                 GameObject go = null;
-                
+               
+
                 if (Application.isPlaying)
                 {
                     go = GameObject.Instantiate(spawnableObject.SpawnablePrefab, position, Quaternion.Euler(eulerAngles));
+                   
                 }
                 else
                 {
@@ -176,11 +179,13 @@ namespace HyperCasual.Runner
 
                 // Set Base Color
                 Spawnable spawnable = go.GetComponent<Spawnable>();
+                AnimChanger animspawneble = go.GetComponent<AnimChanger>();
                 if (spawnable != null)
                 {
                     spawnable.SetBaseColor(spawnableObject.BaseColor);
                     spawnable.SetScale(scale);
                     levelManager.AddSpawnable(spawnable);
+                    levelManager.AddAnimSpawnble(animspawneble);
                 }
 
                 if (go != null)

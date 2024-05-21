@@ -454,6 +454,7 @@ namespace HyperCasual.Runner
                             EulerAngles = spawnables[i].transform.eulerAngles,
                             Scale = spawnables[i].transform.lossyScale,
                             BaseColor = spawnables[i].BaseColor
+                           
                         };
                     }
                     catch (System.Exception e)

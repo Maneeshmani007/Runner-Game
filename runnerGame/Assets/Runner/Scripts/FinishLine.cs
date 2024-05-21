@@ -41,7 +41,7 @@ namespace HyperCasual.Runner
 
         public IEnumerator IslasttimeAnim()
         {
-            yield return new WaitForSeconds(1.8f);
+            yield return new WaitForSeconds(.65f);
             FindObjectOfType<PlayerController>().jumpunch();
             yield return new WaitForSeconds(5f);
             FindObjectOfType<PlayerController>().FinshStop();

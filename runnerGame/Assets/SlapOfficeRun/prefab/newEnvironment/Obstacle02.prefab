@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2601894786892239760}
   - component: {fileID: 2378421896403557001}
   - component: {fileID: 8074244478995651987}
-  - component: {fileID: 5820048687443406871}
   m_Layer: 0
   m_Name: moving grinder triple 1
   m_TagString: Untagged
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435120295838393860}
   m_LocalRotation: {x: 0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -0.01094687, y: -0.489, z: 0.155}
+  m_LocalPosition: {x: -0.01094687, y: -0.573, z: 0.155}
   m_LocalScale: {x: 0.26683, y: 0.26683, z: 0.26683}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,19 +123,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &5820048687443406871
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435120295838393860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9985309, y: 2.010347, z: 0.8685272}
-  m_Center: {x: -0.01696828, y: 1.005173, z: -0.004858613}
 --- !u!1 &1620864061338339231
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +220,6 @@ GameObject:
   - component: {fileID: 8449898140728725529}
   - component: {fileID: 2680401568887342203}
   - component: {fileID: 1275816170074085100}
-  - component: {fileID: 2367209845695271572}
   m_Layer: 0
   m_Name: moving grinder triple 3
   m_TagString: Untagged
@@ -250,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5385304570012812611}
   m_LocalRotation: {x: 0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -0.494, y: 0.219, z: 0.155}
+  m_LocalPosition: {x: -0.569, y: 0.219, z: 0.155}
   m_LocalScale: {x: 0.26683, y: 0.26683, z: 0.26683}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -345,19 +330,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &2367209845695271572
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5385304570012812611}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2002082, y: 2.010347, z: 0.7988945}
-  m_Center: {x: -0.024161339, y: 1.005173, z: -0.036525667}
 --- !u!1 &5676354052717728484
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +343,6 @@ GameObject:
   - component: {fileID: 3293656330085861418}
   - component: {fileID: 5219806540366365040}
   - component: {fileID: 4203226983719937571}
-  - component: {fileID: 224206676680646180}
   m_Layer: 0
   m_Name: moving grinder triple 2
   m_TagString: Untagged
@@ -387,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5676354052717728484}
   m_LocalRotation: {x: 0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.506, y: 0.19, z: 0.155}
+  m_LocalPosition: {x: 0.565, y: 0.24, z: 0.155}
   m_LocalScale: {x: 0.26683, y: 0.26683, z: 0.26683}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -482,19 +453,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &224206676680646180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5676354052717728484}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.96462524, y: 2.010347, z: 0.9517019}
-  m_Center: {x: -0.09320086, y: 1.005173, z: -0.019119859}
 --- !u!1 &8758808352872307269
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,8 +552,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0094993, y: 0.9403492, z: 1.7286034}
-  m_Center: {x: 0.061860323, y: -1.5880511, z: 0.16101736}
+  m_Size: {x: 0.82174504, y: 0.77049357, z: 1.18}
+  m_Center: {x: 0.02, y: -1.89, z: 0.16101736}
 --- !u!65 &2134369526466713143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -607,8 +565,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.854902, y: 0.80132574, z: 1.704112}
-  m_Center: {x: 1.9375204, y: 0.99571985, z: 0.1487717}
+  m_Size: {x: 0.74768996, y: 0.7192164, z: 1.704112}
+  m_Center: {x: 2.14, y: 1.19, z: 0.1487717}
 --- !u!65 &6802806578996432208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -620,8 +578,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9785938, y: 0.80087894, z: 1.8755507}
-  m_Center: {x: -1.8037539, y: 1.1463368, z: 0.00449121}
+  m_Size: {x: 0.7603302, y: 0.64519215, z: 1.8755507}
+  m_Center: {x: -2.07, y: 1.11, z: 0.00449121}
 --- !u!114 &1735325171920703799
 MonoBehaviour:
   m_ObjectHideFlags: 0

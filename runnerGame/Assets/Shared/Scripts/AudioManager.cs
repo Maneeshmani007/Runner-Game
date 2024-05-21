@@ -17,10 +17,13 @@ namespace HyperCasual.Runner
         {
             public SoundID m_SoundID;
             public AudioClip m_AudioClip;
+
         }
 
         [SerializeField]
         AudioSource m_MusicSource;
+
+        public AudioSource slapAudioSource;
         [SerializeField]
         AudioSource m_EffectSource;
         [SerializeField, Min(0f)]
@@ -156,6 +159,14 @@ namespace HyperCasual.Runner
                 return;
             
             PlayEffect(m_Clips[soundID]);
+        }
+        /////.
+        ///
+        // Assign this in the Inspector
+
+        public void PlaySlapSound()
+        {
+            slapAudioSource.PlayOneShot(slapAudioSource.clip);
         }
     }
 }

@@ -216,6 +216,21 @@ namespace HyperCasual.Runner
 
             return playerPosition;
         }
+        Vector3 GetEnemyPosition()
+        {
+            Vector3 playerPosition = Vector3.up;
+            if (PlayerController.Instance != null)
+            {
+                //playerPosition = AnimChanger.Instance.GetPlayerTop();
+            }
+
+            if (GetCameraLockStatus())
+            {
+                playerPosition = Vector3.Scale(playerPosition, k_CenteredScale);
+            }
+
+            return playerPosition;
+        }
 
         void LateUpdate()
         {
@@ -230,25 +245,53 @@ namespace HyperCasual.Runner
 
         void SetCameraPositionAndOrientation(bool smoothCameraFollow)
         {
-            Vector3 playerPosition = GetPlayerPosition();
+            //if (PlayerController.Instance.lastEnemy.GetComponent<AnimChanger>().camforward == true)
+            //{
+            //    Debug.Log("smooth flow entered");
+            //    Vector3 playerPosition = GetEnemyPosition();
+            //    Vector3 offset = playerPosition + GetCameraOffset();
+            //    Vector3 lookAtOffset = playerPosition + GetCameraLookAtOffset();
 
-            Vector3 offset = playerPosition + GetCameraOffset();
-            Vector3 lookAtOffset = playerPosition + GetCameraLookAtOffset();
+            //    if (smoothCameraFollow)
+            //    {
+            //        float lerpAmound = Time.deltaTime * m_SmoothCameraFollowStrength;
 
-            if (smoothCameraFollow)
+            //        m_Transform.position = Vector3.Lerp(m_Transform.position, offset, lerpAmound);
+            //        m_Transform.LookAt(Vector3.Lerp(m_Transform.position + m_Transform.forward, lookAtOffset, lerpAmound));
+
+            //        m_Transform.position = new Vector3(m_Transform.position.x, m_Transform.position.y, offset.z);
+            //    }
+            //    else
+            //    {
+            //        m_Transform.position = playerPosition + GetCameraOffset();
+            //        m_Transform.LookAt(lookAtOffset);
+            //    }
+            //}
+            //else
             {
-                float lerpAmound = Time.deltaTime * m_SmoothCameraFollowStrength;
+                Vector3 playerPosition = GetPlayerPosition();
+                Vector3 enemypo = GetEnemyPosition();
 
-                m_Transform.position = Vector3.Lerp(m_Transform.position, offset, lerpAmound);
-                m_Transform.LookAt(Vector3.Lerp(m_Transform.position + m_Transform.forward, lookAtOffset, lerpAmound));
+                Vector3 offset = playerPosition + GetCameraOffset();
+                Vector3 lookAtOffset = playerPosition + GetCameraLookAtOffset();
 
-                m_Transform.position = new Vector3(m_Transform.position.x, m_Transform.position.y, offset.z);
+                if (smoothCameraFollow)
+                {
+                    float lerpAmound = Time.deltaTime * m_SmoothCameraFollowStrength;
+
+                    m_Transform.position = Vector3.Lerp(m_Transform.position, offset, lerpAmound);
+                    m_Transform.LookAt(Vector3.Lerp(m_Transform.position + m_Transform.forward, lookAtOffset, lerpAmound));
+
+                    m_Transform.position = new Vector3(m_Transform.position.x, m_Transform.position.y, offset.z);
+                }
+                else
+                {
+                    m_Transform.position = playerPosition + GetCameraOffset();
+                    m_Transform.LookAt(lookAtOffset);
+                }
             }
-            else
-            {
-                m_Transform.position = playerPosition + GetCameraOffset();
-                m_Transform.LookAt(lookAtOffset);
-            }
+
+            
         }
     }
 }

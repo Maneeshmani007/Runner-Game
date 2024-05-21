@@ -79,6 +79,7 @@ namespace HyperCasual.Runner
             {
                 m_TempGold += goldPickedEvent.Count;
                 m_Hud.GoldValue = m_TempGold;
+                PlayerController.Instance.AddCoins(1);       //addaed
             }
             else
             {
