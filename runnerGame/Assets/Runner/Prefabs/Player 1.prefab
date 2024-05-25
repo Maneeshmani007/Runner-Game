@@ -64,6 +64,7 @@ MonoBehaviour:
   lastEnemy: {fileID: 0}
   CoinNum: {fileID: 3907519918439130787}
   Levlmanger: {fileID: 0}
+  playeerCoinnum: 0
 --- !u!136 &8475646709700121470
 CapsuleCollider:
   m_ObjectHideFlags: 0

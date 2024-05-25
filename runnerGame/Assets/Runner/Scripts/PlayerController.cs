@@ -72,6 +72,7 @@ namespace HyperCasual.Runner
         bool slap;
         bool finished;
         bool dead;
+        bool isready;
         public float m_MaxXPosition;
         float m_XPos;
         float m_ZPos;
@@ -209,7 +210,8 @@ namespace HyperCasual.Runner
         public void ResetSpeed()
         {
             m_Speed = 0.0f;
-            m_TargetSpeed = GetDefaultSpeed();
+            isready = true;
+            //m_TargetSpeed = GetDefaultSpeed();
         }
 
         /// <summary>
@@ -295,6 +297,8 @@ namespace HyperCasual.Runner
             Invoke("losegame", 3f);
             
         }
+        
+
         public void losegame()
         {
             GameManager.Instance.Lose();
@@ -371,6 +375,11 @@ namespace HyperCasual.Runner
 
             CoinNum.text=FindObjectOfType<Hud>()?.GoldValue.ToString();
             UpdateCoinDisplay();
+            if (UnityEngine.Input.GetMouseButton(0)&&isready==true)
+            {
+                m_TargetSpeed = GetDefaultSpeed();
+                isready = false;
+            }
             //return;
             float deltaTime = Time.deltaTime;
             if (finished == true||dead==true)

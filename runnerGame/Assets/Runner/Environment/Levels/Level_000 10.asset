@@ -364,7 +364,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 0.27, y: 0.18, z: 303.2}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1.2, y: 1.2000203, z: 1.2000203}
+    Scale: {x: 1.2, y: 1.2000217, z: 1.2000217}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -388,7 +388,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 1, y: 1.24, z: 217}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1, y: 1.000021, z: 1.000021}
+    Scale: {x: 1, y: 1.0000224, z: 1.0000224}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -420,7 +420,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 0.27, y: 0.18, z: 46.78}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1.2, y: 1.2000203, z: 1.2000203}
+    Scale: {x: 1.2, y: 1.2000217, z: 1.2000217}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -452,7 +452,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 1, y: 1.24, z: 115}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1, y: 1.000021, z: 1.000021}
+    Scale: {x: 1, y: 1.0000224, z: 1.0000224}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -796,7 +796,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 0.27, y: 0.18, z: 169.23}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1.2, y: 1.2000203, z: 1.2000203}
+    Scale: {x: 1.2, y: 1.2000217, z: 1.2000217}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1

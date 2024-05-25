@@ -67,7 +67,7 @@ public class AnimChanger : MonoBehaviour
     {
         
     }
-    float v = .70f;
+    float v = .25f;
     private void OnTriggerEnter(Collider other)
     {
        
@@ -111,8 +111,9 @@ public class AnimChanger : MonoBehaviour
             charaAnim.SetBool("EnemySlap", true);
             charaAnim.SetBool("Slapped", false);
             Debug.Log($"Enemy Level Num: {enemyLevelNum}, Player Coin Num: {playerCoinNum}");
-            Invoke("DeadStop", .75f);
-            
+            DeadStop();
+            //Invoke("DeadStop", .25f);
+
             //Debug.Log($"Enemy Level Num: {enemyLevelNum}, Player Coin Num: {playerCoinNum}");
             //Invoke("RagdollDelay", v); // Assuming 'v' is defined somewhere in your class
         }
