@@ -20,10 +20,11 @@ namespace HyperCasual.Runner
 
         public ItemPickedEvent m_Event;
         public int m_Count;
+        public bool InvestmentCoin;
 
         bool m_Collected;
         Renderer[] m_Renderers;
-
+        public ParticleSystem CoinCollect;
         /// <summary>
         /// Reset the gate to its initial state. Called when a level
         /// is restarted by the GameManager.
@@ -68,6 +69,7 @@ namespace HyperCasual.Runner
 
             m_Collected = true;
             AudioManager.Instance.PlayEffect(m_Sound);
+           
         }
     }
 }

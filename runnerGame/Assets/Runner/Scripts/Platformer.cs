@@ -25,6 +25,7 @@ namespace HyperCasual.Runner
             {
                 Debug.Log("player");
                 CharaAnim.SetBool("Slapped", true);
+                GetComponent<PlayerEyes>().isPlayerNear=true;
                 //Invoke("SlapAnimdelay", .01f);
             }
         }

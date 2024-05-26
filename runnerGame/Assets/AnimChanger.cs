@@ -20,6 +20,8 @@ public class AnimChanger : MonoBehaviour
     public Text Levlnum;
     public int EnemyLevlNum;
 
+    public GameObject hitparticle;
+
 
 
 
@@ -41,9 +43,13 @@ public class AnimChanger : MonoBehaviour
     }
     public void RagdollDelay()
     {
-        charaAnim.enabled = false;
-        ragdoll.AddForce(forceDirection * forceAmount);
+       
+        GetComponent<PlayerEyes>().isPlayerNear = false;
+        GetComponent<PlayerEyes>().isPlayerSlapping = true;
+        //ragdoll.AddForce(forceDirection * forceAmount);
+        //charaAnim.enabled = false;
         AudioManager.Instance.PlaySlapSound();
+       
         if (camforward == true)
         {
             //FindObjectOfType<CameraManager>().
@@ -67,7 +73,7 @@ public class AnimChanger : MonoBehaviour
     {
         
     }
-    float v = .25f;
+    float v = .38f;
     private void OnTriggerEnter(Collider other)
     {
        
@@ -98,12 +104,26 @@ public class AnimChanger : MonoBehaviour
             else if (lastmanAnim == true)
             {
                 camforward = true;
-                Invoke("RagdollDelay", 5f);
+               
+                Invoke("FinalRagdollDelay", 5f);
             }
         }
     }
+    public void FinalRagdollDelay()
+    {
+        charaAnim.SetBool("LastSlap", true);
+        GetComponent<PlayerEyes>().isPlayerNear = false;
+        GetComponent<PlayerEyes>().isPlayerSlapping = true;
+        ////ragdoll.AddForce(forceDirection * forceAmount);
+        //charaAnim.enabled = false;
+        AudioManager.Instance.PlaySlapSound();
 
-    
+        if (camforward == true)
+        {
+            //FindObjectOfType<CameraManager>().
+        }
+    }
+
     public void Enemypunchchecker(int playerCoinNum, int enemyLevelNum)
     {
         if (enemyLevelNum >= playerCoinNum)
@@ -111,9 +131,19 @@ public class AnimChanger : MonoBehaviour
             charaAnim.SetBool("EnemySlap", true);
             charaAnim.SetBool("Slapped", false);
             Debug.Log($"Enemy Level Num: {enemyLevelNum}, Player Coin Num: {playerCoinNum}");
-            DeadStop();
-            //Invoke("DeadStop", .25f);
+            //DeadStop();
+            Invoke("slaprepeatdelay", 1f);
+            Invoke("hitparticledelay", .45f);
+            GetComponent<PlayerEyes>().isSlapping = true;
+            GetComponent<PlayerEyes>().isPlayerSlapping = false;
+            GetComponent<PlayerEyes>().isBossNear = false;
+            GetComponent<PlayerEyes>().isPlayerNear = false;
 
+
+            ////FindObjectOfType<PlayerController>().SlapDelay();
+            Invoke("DeadStop", .19f);
+           
+            //hitparticle.SetActive (true);
             //Debug.Log($"Enemy Level Num: {enemyLevelNum}, Player Coin Num: {playerCoinNum}");
             //Invoke("RagdollDelay", v); // Assuming 'v' is defined somewhere in your class
         }
@@ -127,9 +157,19 @@ public class AnimChanger : MonoBehaviour
             Invoke("RagdollDelay", v); // Assuming 'v' is defined somewhere in your class
         }
     }
-
+    void slaprepeatdelay()
+    {
+       
+        charaAnim.SetBool("EnemySlap", false);
+    }
+    void hitparticledelay()
+    {
+        hitparticle.SetActive(true);
+       
+    }
     public void DeadStop()
     {
+      
         FindObjectOfType<PlayerController>().Deadstop();
     }
     ///////

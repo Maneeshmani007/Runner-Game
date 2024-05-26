@@ -8,6 +8,8 @@ TagManager:
   - LowObstacle
   - LevelParent
   - Slap
+  - FxTemporaire
+  - Coin
   layers:
   - Default
   - TransparentFX

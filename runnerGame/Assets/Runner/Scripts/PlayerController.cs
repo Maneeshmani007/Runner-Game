@@ -85,6 +85,9 @@ namespace HyperCasual.Runner
         public AnimChanger lastEnemy;
         const float k_HalfWidth = 0.5f;
         public Text CoinNum;
+        public ParticleSystem hitparticle;
+        public ParticleSystem bigHitparticle;
+        public ParticleSystem coincollectPlay;
 
         /// <summary> The player's root Transform component. </summary>
         public Transform Transform => m_Transform;
@@ -144,6 +147,7 @@ namespace HyperCasual.Runner
             m_DefaultScale = m_Transform.localScale;
             m_Scale = m_DefaultScale;
             m_TargetScale = m_Scale;
+            m_Animator.SetBool("Slapstop",true);
 
             if (m_SkinnedMeshRenderer != null)
             {
@@ -289,15 +293,29 @@ namespace HyperCasual.Runner
             m_Speed = 0.0f;
             m_Animator.SetBool("Finish", true);
             m_Animator.SetBool("Dead", true);
-         
+            
+
             slap = false;
             dead = true;
             FindObjectOfType<CameraManager>().finishoffset();
-            Invoke("SlapSound", 1.4f);
+            Invoke("SlapSound", .1f);
             Invoke("losegame", 3f);
             
         }
-        
+        public void SlapDelay()
+        {
+            m_Animator.SetBool("Slapstop", false);
+        }
+        public IEnumerator SlapResetAnim()
+        {
+            yield return new WaitForSeconds(2);
+            m_Animator.SetBool("Slapstop", true);
+        }
+
+        public void DeadAnimdelay()
+        {
+            m_Animator.SetBool("Dead", true);
+        }
 
         public void losegame()
         {
@@ -306,6 +324,7 @@ namespace HyperCasual.Runner
         public void SlapSound()
         {
             AudioManager.Instance.PlaySlapSound();
+           
         }
 
         public void jumpunch()
@@ -337,6 +356,11 @@ namespace HyperCasual.Runner
         }
         private void OnTriggerEnter(Collider other)
         {
+            if (other.GetComponent<Collectable>())
+            {
+                Debug.Log("coincollected");
+                coincollectPlay.Play();
+            }
 
             if (other.CompareTag("Slap"))
             {
@@ -348,19 +372,38 @@ namespace HyperCasual.Runner
                 {
                     Debug.Log("leftsideWORKED");
                     m_Animator.SetBool("Slap2", true);
+                    Invoke("SlapDelay", .5f);
+                    StartCoroutine(SlapResetAnim());
+                    //SlapDelay();
                     m_Animator.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    //hitparticledelay();
+                    Invoke("hitparticledelay", .2f);
                     //SLaptrigger();
                 }
                 else if(other.GetComponent<AnimChanger>().RigthSide == true)
                 {
                     Debug.Log("RIGHTsideWORKED");
                      m_Animator.SetBool("SlapLeft", true);
+                    Invoke("SlapDelay", .5f);
+                    StartCoroutine(SlapResetAnim());
+                    //SlapDelay();
+                    Invoke("hitparticledelay", .2f);
+                    //hitparticledelay();
                     m_Animator.transform.localRotation = Quaternion.Euler(0, 0, 0);
                 }
+                else if (other.GetComponent<AnimChanger>().lastmanAnim == true)
+                {
+                    Invoke("BigParticle", 5f);
+                }
+
 
                 // m_Animator.SetBool("Slap2", true);
             }
            
+        }
+        public void BigParticle()
+        {
+            bigHitparticle.Play();
         }
         public void SLaptrigger() {
             m_Animator.transform.localRotation = Quaternion.Euler(0,0,0);
@@ -368,8 +411,12 @@ namespace HyperCasual.Runner
             m_Animator.SetBool("SlapLeft", false);
             Debug.Log("Slaptriggerworked");
         }
+        void hitparticledelay()
+        {
+            hitparticle.Play();
 
-        
+        }
+
         void Update()
         {
 

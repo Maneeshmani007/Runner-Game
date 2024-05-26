@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Sound: 1
   m_Event: {fileID: 11400000, guid: a796f105604544326aea1a54797b65ba, type: 2}
   m_Count: 1
+  CoinCollect: {fileID: 0}
 --- !u!114 &5865817047607477699
 MonoBehaviour:
   m_ObjectHideFlags: 0
