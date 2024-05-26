@@ -105,7 +105,7 @@ public class AnimChanger : MonoBehaviour
             {
                 camforward = true;
                
-                Invoke("FinalRagdollDelay", 5f);
+                Invoke("FinalRagdollDelay", 4.6f);
             }
         }
     }
