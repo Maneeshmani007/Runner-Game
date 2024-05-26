@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using HyperCasual.Gameplay;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
 
 namespace HyperCasual.Runner
@@ -143,6 +144,8 @@ namespace HyperCasual.Runner
 
             UpdateCoinDisplay();
             m_Transform = transform;
+            m_Transform.eulerAngles = new Vector3(0, -180, 0);
+            Invoke("tapToUpdateDelay", .5f);
             m_StartPosition = m_Transform.position;
             m_DefaultScale = m_Transform.localScale;
             m_Scale = m_DefaultScale;
@@ -162,7 +165,10 @@ namespace HyperCasual.Runner
         }
 
 
-
+        void tapToUpdateDelay()
+        {
+            FindObjectOfType<Hud>().TaptoPlay?.SetActive(true);
+        }
 
 
 
@@ -426,6 +432,8 @@ namespace HyperCasual.Runner
             {
                 m_TargetSpeed = GetDefaultSpeed();
                 isready = false;
+                m_Transform.eulerAngles = new Vector3(0, 0, 0);
+                FindObjectOfType<Hud>().TaptoPlay.SetActive(false);
             }
             //return;
             float deltaTime = Time.deltaTime;

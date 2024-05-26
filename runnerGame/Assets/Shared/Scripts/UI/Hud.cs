@@ -16,12 +16,15 @@ namespace HyperCasual.Gameplay
     {
         [SerializeField]
         public TextMeshProUGUI m_GoldText;
+        public GameObject TaptoPlay;
+        public TextMeshProUGUI LevelNum;
         [SerializeField]
         Slider m_XpSlider;
         [SerializeField]
         HyperCasualButton m_PauseButton;
         [SerializeField]
         AbstractGameEvent m_PauseEvent;
+
 
         /// <summary>
         /// The slider that displays the XP value 

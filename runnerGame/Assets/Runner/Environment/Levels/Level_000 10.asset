@@ -372,7 +372,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 0.27, y: 0.18, z: 303.2}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1.2, y: 1.2000318, z: 1.2000318}
+    Scale: {x: 1.2, y: 1.2000327, z: 1.2000327}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -396,7 +396,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 1, y: 1.24, z: 217}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1, y: 1.0000324, z: 1.0000324}
+    Scale: {x: 1, y: 1.0000334, z: 1.0000334}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -428,13 +428,13 @@ MonoBehaviour:
       type: 3}
     Position: {x: 0.27, y: 0.18, z: 46.78}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1.2, y: 1.2000318, z: 1.2000318}
+    Scale: {x: 1.2, y: 1.2000327, z: 1.2000327}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
   - SpawnablePrefab: {fileID: 7819268680679308708, guid: 11d06f311e154489980127658439a3f1,
       type: 3}
-    Position: {x: 2, y: -0.089199066, z: 30.15}
+    Position: {x: 2, y: 0.13, z: 30}
     EulerAngles: {x: 0, y: 180, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
@@ -444,7 +444,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 1, y: 1.24, z: 115}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1, y: 1.0000324, z: 1.0000324}
+    Scale: {x: 1, y: 1.0000334, z: 1.0000334}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -788,7 +788,7 @@ MonoBehaviour:
       type: 3}
     Position: {x: 0.27, y: 0.18, z: 169.23}
     EulerAngles: {x: 270, y: 0, z: 0}
-    Scale: {x: 1.2, y: 1.2000318, z: 1.2000318}
+    Scale: {x: 1.2, y: 1.2000327, z: 1.2000327}
     BaseColor: {r: 0, g: 0, b: 0, a: 0}
     HoldNum: 0
     SnapToGrid: 1
@@ -822,6 +822,14 @@ MonoBehaviour:
     EulerAngles: {x: -0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     BaseColor: {r: 0.57254905, g: 0.30588236, b: 0.1764706, a: 1}
+    HoldNum: 0
+    SnapToGrid: 1
+  - SpawnablePrefab: {fileID: 555647705176474545, guid: 28b26f5971b2a46e0a8da001b3ac3392,
+      type: 3}
+    Position: {x: 0, y: -5.5, z: -90}
+    EulerAngles: {x: 0.000002504478, y: -0, z: -0}
+    Scale: {x: 3.8, y: 4, z: 80}
+    BaseColor: {r: 1, g: 0.3529412, b: 1, a: 1}
     HoldNum: 0
     SnapToGrid: 1
   skyBoxMat: {fileID: 2100000, guid: 99a400087584f4263b1a8979d6007ad4, type: 2}

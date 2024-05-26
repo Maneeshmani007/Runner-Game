@@ -35,6 +35,7 @@ namespace HyperCasual.Gameplay
         void Start()
         {
             var levels = SequenceManager.Instance.Levels;
+            Debug.Log("num" + levels);
             for (int i = 0; i < levels.Length; i++)
             {
                 m_Buttons.Add(Instantiate(m_LevelButtonPrefab, m_LevelButtonsRoot));

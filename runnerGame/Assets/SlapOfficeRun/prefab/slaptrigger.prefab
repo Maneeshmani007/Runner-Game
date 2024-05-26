@@ -2640,6 +2640,7 @@ MonoBehaviour:
   isPlayerNear: 0
   isBossNear: 0
   isPlayerSlapping: 0
+  isSlapping: 0
 --- !u!1 &7956141775382861423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,12 +3259,12 @@ PrefabInstance:
     - target: {fileID: 132752101195223891, guid: 308ece49ab3094bc1aa8753619372020,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 113.12
+      value: 88.865
       objectReference: {fileID: 0}
     - target: {fileID: 132752101195223891, guid: 308ece49ab3094bc1aa8753619372020,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 56.56
+      value: 53.9872
       objectReference: {fileID: 0}
     - target: {fileID: 132752101195223891, guid: 308ece49ab3094bc1aa8753619372020,
         type: 3}
@@ -3273,12 +3274,37 @@ PrefabInstance:
     - target: {fileID: 132752101195223891, guid: 308ece49ab3094bc1aa8753619372020,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0000023246
+      value: 0.30393
       objectReference: {fileID: 0}
     - target: {fileID: 132752101195223891, guid: 308ece49ab3094bc1aa8753619372020,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000011884
+      value: -0.018623
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254752846565161889, guid: 308ece49ab3094bc1aa8753619372020,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779402487334525622, guid: 308ece49ab3094bc1aa8753619372020,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779402487334525622, guid: 308ece49ab3094bc1aa8753619372020,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 53.0769
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779402487334525622, guid: 308ece49ab3094bc1aa8753619372020,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.15498
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779402487334525622, guid: 308ece49ab3094bc1aa8753619372020,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0158
       objectReference: {fileID: 0}
     - target: {fileID: 5942103097110701796, guid: 308ece49ab3094bc1aa8753619372020,
         type: 3}
