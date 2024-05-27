@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using HyperCasual.Core;
+using HyperCasual.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,6 +36,11 @@ namespace HyperCasual.Runner
         void OnPlayAgainButtonClick()
         {
             m_PlayAgainEvent.Raise();
+            Invoke("tapToUpdateDelay", .5f);
+        }
+        void tapToUpdateDelay()
+        {
+            FindObjectOfType<Hud>().TaptoPlay?.SetActive(true);
         }
 
         void OnGoToMainMenuButtonClick()
