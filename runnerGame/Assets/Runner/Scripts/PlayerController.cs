@@ -425,10 +425,10 @@ namespace HyperCasual.Runner
 
         void Update()
         {
-
+           
             CoinNum.text=FindObjectOfType<Hud>()?.GoldValue.ToString();
             UpdateCoinDisplay();
-            if (UnityEngine.Input.GetMouseButton(0)&&isready==true)
+            if (UnityEngine.Input.GetMouseButton(0) && isready==true)
             {
                 m_TargetSpeed = GetDefaultSpeed();
                 isready = false;

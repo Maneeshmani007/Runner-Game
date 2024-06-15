@@ -281,6 +281,8 @@ namespace HyperCasual.Runner
             meshFilter.sharedMesh = mesh;
             MeshRenderer meshRenderer = terrainGameObject.AddComponent<MeshRenderer>();
             meshRenderer.sharedMaterial = terrainMaterial;
+            meshRenderer.enabled = false;          ///  ADDED FOR HIDE MESH
+
         }
     }
 }
